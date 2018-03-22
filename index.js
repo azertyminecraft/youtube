@@ -10,7 +10,7 @@ bot.on('ready', function () {
 })
 
 
-bot.login(NDI2MzQzODAxMjQ2NzExODI5.DZV0ow.MD2iLoNIPiVyhjeCqggCgBrIhnw);
+bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
   if(message.author.bot) return;
