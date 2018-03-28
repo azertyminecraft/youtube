@@ -1,14 +1,12 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({disableEveryone: true});
 
-
+bot.login(process.env.TOKEN);
 bot.on('ready', function () {
 
   console.log(`Je suis connecté sur ${bot.guilds.size} serveurs avec ${bot.users.size} utilisateurs !`)
   bot.user.setActivity(`https://discord.gg/xzqJ7ek - ytc!help`, {type: "WATCHING"});
 })
-
-bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
   if(message.author.bot) return;
