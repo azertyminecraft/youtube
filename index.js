@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({disableEveryone: true});
+const token = process.env.TOKEN;
 
-bot.login(process.env.TOKEN);
+bot.login(token)
 bot.on('ready', function () {
 
   console.log(`Je suis connecté sur ${bot.guilds.size} serveurs avec ${bot.users.size} utilisateurs !`)
