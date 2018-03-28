@@ -6,9 +6,7 @@ bot.on('ready', function () {
 
   console.log(`Je suis connecté sur ${bot.guilds.size} serveurs avec ${bot.users.size} utilisateurs !`)
   bot.user.setActivity(`https://discord.gg/xzqJ7ek - ytc!help`, {type: "WATCHING"});
-
 })
-
 
 bot.login(process.env.TOKEN);
 
@@ -23,24 +21,15 @@ bot.on('message', message => {
   
   
   if(cmd === `${prefix}aide`){
- 
     let bicon = bot.user.displayAvatarURL;
-
     let helpembed = new Discord.RichEmbed()
-
+    
     .setDescription("_Pages d'aides_")
-
     .setColor("#15f153")
-
     .setThumbnail(bicon)
-
-    .addField("Liste des commandes disponible", "Bot officiel du serveur Youtube Community: https://discord.gg/xzqJ7ek")
-
+    .addField("Liste des commandes disponible", "Bot officiel du serveur DiscordBots • FR • : https://discord.gg/xzqJ7ek")
     .addBlankField()
-
-
-    .addField(":gear: Utiles", "``roleme,``report``,``yinfo``")
+    .addField(":gear: Utiles", "``report``");
 
     message.reply(":envelope_with_arrow: Regardez vos messages privé !")
-
     message.author.sendEmbed(helpembed);
