@@ -31,4 +31,5 @@ bot.on('message', message => {
     .addField(":gear: Utiles", "``report``");
 
     message.reply(":envelope_with_arrow: Regardez vos messages privé !")
-    message.author.sendEmbed(helpembed);
+    message.author.sendEmbed(helpembed)
+  }})
